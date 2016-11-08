@@ -1,0 +1,1 @@
+echo -e "#ifdef __STDC__\n#error\n#endif"|/opt/codefidence/bin/mipsel-linux-gcc -xc -c - > /dev/null 2>&1; test $? -eq 0  || echo "c89"
